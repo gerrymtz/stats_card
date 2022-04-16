@@ -1,0 +1,27 @@
+{
+  "name": "stats_card",
+  "version": "1.0.0",
+  "description": "Frontend mentor challenge",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gerrymtz/stats_card.git"
+  },
+  "keywords": [
+    "HTML5",
+    "CSS3",
+    "SASS"
+  ],
+  "author": "Gerardo Martínez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gerrymtz/stats_card/issues"
+  },
+  "homepage": "https://github.com/gerrymtz/stats_card#readme",
+  "devDependencies": {
+    "sass": "^1.50.0"
+  }
+}
