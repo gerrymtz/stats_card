@@ -1,0 +1,30 @@
+@use '../variables/fonts';
+@use '../variables/colors';
+@use 'sass:map';
+
+
+@mixin setHTML {
+    font-size: fonts.$mainSize;
+    color: map.get(colors.$neutral, "mainHeadingStats");
+}
+
+@mixin setBody {
+    min-height: 100vh;
+    width: 100%;
+}
+
+@mixin resetGeneralSettings {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+@mixin setContainer {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    overflow: hidden;
+    outline: 2px solid red;
+}

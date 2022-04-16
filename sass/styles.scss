@@ -1,3 +1,109 @@
+@use 'index/index';
+@use 'sass:map';
+
+
+*,
+::after,
+::before {
+    @include index.resetGeneralSettings;
+}
+
+html {
+    @include index.setHTML;
+}
+
 body {
-    background-color: crimson;
+    @include index.setBody;
+}
+
+.container {
+    @include index.setContainer;
+}
+
+.main {
+    background-color: map.get(index.$primary, "mainBg");
+
+    .component {
+        height: auto;
+
+        .component__container {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .card {
+                display: flex;
+                background-color: map.get(index.$primary, "cardBg");
+                width: 100%;
+                height: 500px;
+                border-radius: 15px;
+
+                .card__texts {
+                    width: 50%;
+                    padding: 60px 85px 60px 60px;
+
+                    .card__title {
+                        font-family: index.$interFont;
+                        font-size: 40px;
+                        margin-bottom: 35px;
+
+                        .title__mark {
+                            color: map.get(index.$primary, "accent");
+                        }
+
+                    }
+
+                    .card__paragraph {
+                        font-size: index.$mainSize;
+                        font-family: index.$interFont;
+                        line-height: 1.5;
+                    }
+
+                }
+
+                .card__figure {
+                    width: 50%;
+                    position: relative;
+
+                    .card__img {
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        object-fit: cover;
+                        border-radius: 0 15px 15px 0;
+                    }
+
+                    &::after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        background-color: map.get(index.$primary, "accent");
+                        opacity: 0.6;
+                        filter: contrast(150%);
+                        border-radius: 0 15px 15px 0;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    .credits {
+
+        .credits__container {
+            min-height: 10vh;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+    }
+
 }
